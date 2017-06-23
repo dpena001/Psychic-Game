@@ -1,0 +1,117 @@
+body {
+	margin: auto;
+	width: 725px;
+	position: relative;
+}
+
+h1 {
+	font-size: 25px;
+	font-family: "Helvetica Neue";
+	font-weight: bold;
+	color: #5B9BD5;
+	position: relative;
+}
+
+p {
+	font-size: 15px;
+	font-family: sans-serif;
+	color: #777;
+	text-align: justify;
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	position: relative;
+}
+
+
+header {
+	margin-top: 4px;
+	width: 721px;
+	border-width: 2px;
+	border-style: double;
+	background-color: #ffffff;
+	border-color: #cccccc;
+	text-align: center;
+	position: relative;
+}
+
+section {
+	margin-top: 0px;
+	width: 360px;
+	border-width: 2px;
+	border-style: double;
+	background-color: #ffffff;
+	border-color: #cccccc;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	position: relative;
+}
+aside {
+	margin-top: 0px;
+	width: 357px;
+	height: 144px;
+	border-width: 2px;
+	border-style: double;
+	background-color: #ffffff;
+	border-color: #cccccc;
+	text-align: center;
+	vertical-align: middle;
+	float: right;
+	position: relative;
+}
+
+
+table {
+	margin-left: 5px;
+	position: relative;
+}
+
+#wins{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: green;
+	font-weight: bold;
+	text-align: justify;
+	position: relative;	
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+}
+
+#losses{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: red;
+	font-weight: bold;
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	position: relative;
+}
+
+#guesses{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: blue;
+	font-weight: bold;
+	position: relative;
+	font-weight: bold;
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+}
+
+#sofar{
+	font-size: 15px;
+	font-family: sans-serif;
+	color: blue;
+	font-weight: bold;
+	position: relative;
+	font-weight: bold;
+	line-height: 1.5em;
+}

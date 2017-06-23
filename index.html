@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Psychic Game</title>
+
+    <!-- Linking js file -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script> 
+
+    <!-- Resetting stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Linking CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+    
+    <div class ="container">
+
+     <header><h1>The Psychic Game</h1></header> 
+     <section>
+     <p>Guess what letter I'm thinking of:</p>
+     <br>
+     <table>
+      <tr><td width="45"><p>Wins:</p></td><td><div id="wins">0</div></td><td>
+      </tr>
+     </table>
+     <table>  
+     <tr><td width="60"><p>Losses:</p></td><td><div id="losses">0</div></td></tr>
+     </table>
+     <table>
+     <tr><td width="100"><p>Guesses Left:</td><td><div id="guesses">9</div></td></tr>
+     </table>
+     <table>
+     <tr><td width="145"><p>Your Guesses so far:</p></td><td><div id="sofar"></td></tr></div>
+     </table>
+     </section>
+     <aside>
+       <div id="images-div"><img src="assets/images/psychic.jpg" style="width:357px;height: 143px;"></div>
+     </aside>
+
+    </div>
+    <script>
+
+      // VARIABLES
+      // ==========================================================================
+      var wins = 0;
+      var losses = 0;
+      var guessleft = 9;
+      var sofar ="";
+      var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+     
+      // MAIN PROCESS
+     
+      // Captures keyboard input. 
+      document.onkeyup = function(event) {
+
+        // Captures the key press, converts it to lowercase, and saves it to a variable.
+        var letter = String.fromCharCode(event.keyCode).toLowerCase();
+
+        // Check Guesses left.
+
+          if (guessleft > 1) {
+             if ( letter === whatsthinking(abc)){
+                wins++;
+                guessleft = 9;
+                sofar="";
+                printintoscreen("wins",wins);
+                printintoscreen("guesses",guessleft);
+                printintoscreen("sofar",sofar);
+                printimagestoscreen("images-div","win");
+             } else
+             {
+                guessleft--;
+                sofar=sofar+" "+letter;
+                printintoscreen("guesses",guessleft);
+                printintoscreen("sofar",sofar);
+                printimagestoscreen("images-div","guess");
+             }
+          }
+          else
+          {
+            losses++;
+            printintoscreen("losses",losses);
+            sofar="";
+            printintoscreen("sofar",sofar);
+            guessleft = 9;           
+            printintoscreen("guesses",guessleft);
+            printimagestoscreen("images-div","loser");
+          }
+   
+      };
+    </script>
+
+  </body>
+</html>
